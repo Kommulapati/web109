@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+		<title>HEALTHCARE-DASHBOARD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <link href="assets/img/Fevicon1.png" rel="icon">
+		
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+     
+	$scope.Submit=function(login){
+	
+		if(login.username=="APSSDC" && login.password=="InnovationCamp")
+		{
+			alert("welcome to HealthCare");
+			window.location="Contactus.html";
+		}
+		else
+		{
+		alert("Incorrect values ");
+		alert(login.username +","+login.password);
+		}
+	
+	
+	}
+});
+</script>
+
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("img_girl.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+<style>
+form {
+    border: 2px solid #52D017;
+	width: 20%;
+	position: absolute;
+    right: 65px;
+    bottom: 65px;
+	form-align:right;
+	background-color: #0000003d;
+	    color: white;
+}
+
+input[type=text], input[type=password] {
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #52D017;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 85%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+h1{
+	color:white;
+	text-align: center;
+    font-size:35px;
+   }
+   h2{
+	color:#52D017;
+	text-align: center;
+   }
+h3{
+	color:blue;
+	text-align: center;
+	font-size:10px;
+	}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+ 
+.container {
+    padding: 8px;
+	
+}
+
+</style>
+</head>
+<body ng-app="myApp" ng-controller="formCtrl" style="background-image:url(HealthCare3.jpg)">
+
+<div align="center" style="background-color:#0000003d;">
+	<h1>HEALTHCARE-DASHBOARD </h1>
+</div>
+
+ 
+<form >
+<h2>HEALTHCARE - LOGIN</h2> 
+  <div class="container">
+ <b><label>LOGIN ID</b></label>
+	<P>
+    <input type="text" placeholder="Enter Username" name="uname" ng-model="login.username" required></P>
+<p>
+    <label><b>PASSWORD</b></label></p>
+	<P>
+    <input type="password" placeholder="Enter Password" name="psw" ng-model="login.password" required></P>
+        
+   <P> <button type="submit" ng-click="Submit(login)" >Login</button><P>
+    <label>
+      <input type="checkbox" checked="checked"> Remember me</label>
+  </div>
+<div class="panel-footer">
+                    Not Registered? <a href="Registration.html" style="color:orange"> Register here</a></div>
+            </div>
+ 
+ <br/>
+</form>
+ 
+
+</body>
+</html>
